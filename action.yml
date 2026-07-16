@@ -1,0 +1,31 @@
+name: Latex indent check
+description: Check or apply latexindent formatting on .tex files
+author: quentin-rodriguez
+
+branding:
+  icon: align-left
+  color: blue
+
+inputs:
+  file:
+    description: File or glob pattern (.tex)
+    required: true
+    type: string
+  config:
+    description: Path to the config file
+    required: false
+    type: string
+    default: latexindent.yaml
+  arguments:
+    description: Extra arguments passed directly to latexindent
+    required: false
+    type: string
+    default: ""
+
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.file }}
+    - ${{ inputs.config }}
+    - ${{ inputs.arguments }}

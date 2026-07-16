@@ -1,0 +1,11 @@
+indentation:
+  general:
+    indent: "  "
+removeTrailingWhitespace:
+  method: 0
+lineWidth: 0
+noAdditionalIndent:
+  document: 0
+noIndentBlock:
+  - verbatim
+  - lstlisting

@@ -1,0 +1,29 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+      - master
+
+jobs:
+  test-passed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./
+        with:
+          file: test/well-formatted.tex
+          config: test/latexindent.yaml
+
+  test-failed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./
+        continue-on-error: true
+        with:
+          file: test/badly-formatted.tex
+          config: test/latexindent.yaml
+
