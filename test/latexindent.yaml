@@ -7,5 +7,6 @@ lineWidth: 0
 noAdditionalIndent:
   document: 0
 noIndentBlock:
-  - verbatim
-  - lstlisting
+  verbatim: 1
+  lstlisting: 1
+  minted: 1
