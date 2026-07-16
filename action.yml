@@ -1,4 +1,4 @@
-name: Latex indent check
+name: latexindent-action
 description: Check or apply latexindent formatting on .tex files
 author: quentin-rodriguez
 
