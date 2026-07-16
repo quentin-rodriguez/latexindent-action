@@ -26,4 +26,8 @@ jobs:
         with:
           file: test/badly-formatted.tex
           config: test/latexindent.yaml
+      - if: steps.badcheck.outcome != "failure"
+        run: |
+          echo "The action should have failed on a badly-formatted file!"
+          exit 1
 
