@@ -16,7 +16,7 @@ inputs:
     required: false
     type: string
     default: latexindent.yaml
-  arguments:
+  args:
     description: Extra arguments passed directly to latexindent
     required: false
     type: string
@@ -28,4 +28,4 @@ runs:
   args:
     - ${{ inputs.file }}
     - ${{ inputs.config }}
-    - ${{ inputs.arguments }}
+    - ${{ inputs.args }}
